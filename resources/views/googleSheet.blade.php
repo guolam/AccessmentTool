@@ -7,7 +7,7 @@
 <body>
     @auth
     <div class="flex justify-center">
-    <input type="text" id="email" name="email" value="{{ auth()->user()->email }}">
+    <input type="hidden" id="email" name="email" value="{{ auth()->user()->email }}">
    <button id="fetchData" class="py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果を見る</button>
 
     </div>
@@ -25,7 +25,7 @@
             const email = document.getElementById('email').value;
             console.log(email)
             // Ajaxリクエストを送信
-            fetch("{{ route('sheet') }}?email=" + email)
+            fetch("/google-sheets-data?email=" + email)
            .then(response => response.json())
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す
@@ -36,8 +36,7 @@
                 });
         }
        
-       
-     
+
 
         // レーダーチャートを描画する関数
         function drawRadarChart(data) {
