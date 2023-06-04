@@ -30,6 +30,7 @@ class GoogleSheetsController extends Controller
         $values = $response->getValues();//データを配列で取得
     
 
-        return response()->json($values);
+        // return response()->json($values);
+        return ($values);
     }
 }
