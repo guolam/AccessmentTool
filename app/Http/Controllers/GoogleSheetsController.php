@@ -21,7 +21,7 @@ class GoogleSheetsController extends Controller
         ]);
 
         //スプレッドシート取得--------------------
-        $sheetId = '1ml44HFe1tGhl7_eJgIbB4EQjDusAami3gRUTA64zdps';
+        $sheetId = '14ioGckdPt2-B1w8YD3ydnNvLxOjsgU_MQK79eJHy1eI';
         
         $sheetService = new Google_Service_Sheets($client);
         $range = 'Sheet1'; // 取得する範囲(今回はSheet1の内容全てを取得)
@@ -32,9 +32,10 @@ class GoogleSheetsController extends Controller
         $values = $response->getValues();//データを配列で取得
     
 
-        // return response()->json($values);
-
-        return response()->view('googleSheet',compact('values'));
+        return response()->json($values);
+        // return response()->view('googleSheet',compact('values'));
+        // return view('googleSheet')->with('values', $values);
+        // console.log($values);
         
         // $client = new Google_Client();
         // $client->setApplicationName("Laravel");
