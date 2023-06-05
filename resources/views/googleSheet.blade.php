@@ -35,6 +35,8 @@
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す
                     drawRadarChart(data);
+                    
+              
                 })
                   .catch(error => {
                      console.error("データの取得に失敗しました", error);
@@ -46,6 +48,8 @@
         function drawRadarChart(data) {
             
             const timestamp=data[0][0]
+            console.log(timestamp);
+            
             const answer=data[0]
             //問題解決力
             const problemsolving = answer.slice(2, 17);
@@ -358,23 +362,31 @@
         //各項目の点数計算
         // 自己認識
         const totalScoreSelfUnderstanding = calculateTotalScore(resultSelfUnderstanding);
-       
+        console.log(totalScoreSelfUnderstanding);
+        
         // 自己肯定感
         const totalScoreSelfEsteem = calculateTotalScore(resultSelfEsteem);
+        console.log(totalScoreSelfEsteem);
         
         //コミュニケーション
-        const totalScoreCommunication = calculateTotalScore(resultCommunication)；
+        const totalScoreCommunication = calculateTotalScore(resultCommunication);
+        console.log(totalScoreCommunication);
+        
         //レジリエンス
         const totalScoreResilience = calculateTotalScore(resultResilience);
-
+        console.log(totalScoreResilience);
+        
        //問題解決力の計算
         const totalScoreProblemSolving = calculateTotalScore(resultProblemSolving);
-
+        console.log(totalScoreProblemSolving); // 合計スコアの値を表示
+        
         // 課題認識力
         const totalScoreProblemFocus = calculateTotalScore(resultProblemFocus);
-
+        console.log(totalScoreProblemFocus);
+        
         //時間的展望
         const totalScoreTimePerspective= calculateTotalScore(resultTimeperspective);
+        console.log(totalScoreTimePerspective);
         
         //質問の平均点計算
         const Q1result = totalScoreSelfUnderstanding / 33; // 自己認識
@@ -384,7 +396,9 @@
         const Q5result = totalScoreProblemSolving / 15; //問題解決力
         const Q6result = totalScoreProblemFocus / 22; // 課題認識力
         const Q7result = totalScoreTimePerspective / 18; //時間的展望
-     
+      
+            
+            
             const canvas = document.getElementById('radarChart');
 
             new Chart
