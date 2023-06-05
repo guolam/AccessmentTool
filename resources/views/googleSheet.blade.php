@@ -25,7 +25,12 @@
             const email = document.getElementById('email').value;
             console.log(email)
             // Ajaxリクエストを送信
-            fetch("/google-sheets-data?email=" + email)
+            fetch("/google-sheets-data?email=" + email,{
+            headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+            }
+           })
            .then(response => response.json())
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す

@@ -14,7 +14,7 @@ class GoogleSheetsController extends Controller
     {
         
         $client = new Google_Client();
-        $key_file = storage_path('app/public/credential.json'); // サービスキーのjsonファイル
+        $key_file = storage_path('app/public/credential.json'); 
         $client->setAuthConfig($key_file);
         $client->setScopes([
             'https://www.googleapis.com/auth/spreadsheets'
