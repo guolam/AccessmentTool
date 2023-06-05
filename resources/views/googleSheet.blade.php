@@ -23,18 +23,20 @@
         // データ取得用のAjaxリクエストを送信する関数
         function fetchData() {
             const email = document.getElementById('email').value;
-            console.log(email)
             // Ajaxリクエストを送信
-                fetch("{{ route('sheet') }}?email=" + email,{
+            fetch("{{ route('sheet') }}?email=" + email,{
             headers : { 
             'Content-Type': 'application/json',
             'Accept': 'application/json'
             }
            })
            .then(response => response.json())
+                
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す
+                    console.log(data);
                     drawRadarChart(data);
+                    
               
                 })
                   .catch(error => {
@@ -46,9 +48,10 @@
         // レーダーチャートを描画する関数
         function drawRadarChart(data) {
             
-            const answer=data[1];
-            const timestamp=answer[0];
+            const timestamp=data[0][0]
+            console.log(timestamp);
             
+            const answer=data[0]
             //問題解決力
             const problemsolving = answer.slice(2, 17);
             
