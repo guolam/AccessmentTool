@@ -1,6 +1,6 @@
 <x-app-layout>
 <head>
-    <title>Google Sheets Radar Chart</title>
+    <title>ビジネス力診断</title>
     <!-- Chart.jsのスクリプトを読み込む -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -8,7 +8,7 @@
     @auth
     <div class="flex justify-center">
     <input type="hidden" id="email" name="email" value="{{ auth()->user()->email }}">
-   <button id="fetchData" class="py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果を見る</button>
+   <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果はこちらをクリック</x-primary-button>
 
     </div>
      @endauth
@@ -43,7 +43,7 @@
             
             console.log(data[1]);
             const answer=data[1];
-            const timestamp=data[0];
+            const timestamp=answer[0];
             console.log(answer);
             console.log(answer[0]);
             console.log(answer[3]);
@@ -421,7 +421,7 @@
                     '時間的展望'
                     ],
                     datasets: [{
-                        label: 'timestamp',
+                        label: `${timestamp}`,
                         data: [Q1result,Q2result,Q3result,Q4result,Q5result,Q6result,Q7result],
                         fill: true,
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
