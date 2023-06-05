@@ -25,7 +25,7 @@
             const email = document.getElementById('email').value;
             console.log(email)
             // Ajaxリクエストを送信
-            fetch("/google-sheets-data?email=" + email,{
+                fetch("{{ route('sheet') }}?email=" + email,{
             headers : { 
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -35,6 +35,7 @@
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す
                     drawRadarChart(data);
+                    console.log(data);
                 })
                   .catch(error => {
                      console.error("データの取得に失敗しました", error);
@@ -42,8 +43,6 @@
               
         }
        
-
-
         // レーダーチャートを描画する関数
         function drawRadarChart(data) {
             
