@@ -46,41 +46,30 @@
         // レーダーチャートを描画する関数
         function drawRadarChart(data) {
             
-            console.log(data[1]);
             const answer=data[1];
             const timestamp=answer[0];
-            console.log(answer);
-            console.log(answer[0]);
-            console.log(answer[3]);
             
             //問題解決力
             const problemsolving = answer.slice(2, 17);
-            console.log(problemsolving);
             
             //レジリエンス
             const resilience =answer.slice(17,38);
-            console.log(resilience);
             
             //問題焦点
             const problemfocus=answer.slice(38,59);
-            console.log(problemfocus);
             
             //時間的展望
             const timeperspective=answer.slice(59,76);
-            console.log(timeperspective);
-            
+           
             //自己認識
             const selfunderstand=answer.slice(77,114);
-            console.log(selfunderstand);
-            
+          
             //自己肯定感
             const selfesteem=answer.slice(115,147);
-            console.log(selfesteem);
-            
+          
             //コミュニケーション力
             const communication=answer.slice(148,171);
-            console.log(communication);
-
+          
             const reversedIndices = [22, 23, 29, 30, 31, 32, 62, 63, 65, 67, 70, 71, 72, 74, 75, 76, 86, 87, 94, 95,]
 
             //問題解決力
@@ -113,8 +102,6 @@
                   resultProblemSolving[i + 2] = 1;
                 }
               }
-              console.log(currentQuestion);
-              console.log(resultProblemSolving)
             }
             
         
