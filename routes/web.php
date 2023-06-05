@@ -10,9 +10,6 @@ Route::get('/', function () {
 });
 
 Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])->name('sheet');
-// Route::get('/googleSheet', function(){
-//     return view('googleSheet');
-// });
     
 Route::get('/dashboard', function () {
     return view('googleSheet');
