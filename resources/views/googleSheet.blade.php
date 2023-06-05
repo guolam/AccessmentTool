@@ -36,6 +36,9 @@
                     // データを取得してレーダーチャートを描画する関数を呼び出す
                     drawRadarChart(data);
                 })
+                  .catch(error => {
+                     console.error("データの取得に失敗しました", error);
+                 });
               
         }
        
