@@ -16,10 +16,7 @@
    
 
     <canvas id="radarChart"></canvas>
-
     <script>
-
-    
         // データ取得用のAjaxリクエストを送信する関数
         function fetchData() {
             const email = document.getElementById('email').value;
@@ -35,8 +32,7 @@
                 .then(data => {
                     // データを取得してレーダーチャートを描画する関数を呼び出す
                     drawRadarChart(data);
-                    
-              
+
                 })
                   .catch(error => {
                      console.error("データの取得に失敗しました", error);
