@@ -9,7 +9,8 @@ Route::get('/', function () {
     return view('auth.register');
 });
 
-Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])->middleware(['auth', 'verified'])->name('sheet');
+Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])
+->middleware(['auth', 'verified'])->name('sheet');
     
 Route::get('/dashboard', function () {
     return view('googleSheet');
