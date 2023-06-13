@@ -33,14 +33,12 @@ class GoogleSheetsController extends Controller
         
         $response = $sheetService->spreadsheets_values->get($sheetId, $range);
         $values = $response->getValues();//データを配列で取得
-    
+
         // emailを照合して該当するデータを選択
         $filteredData = array_filter($values, function ($row) use ($email) {
             return $row[1] === $email;
-           
         });
-        
-        
+
         $filteredDataWithKeys = array_values($filteredData); // 添字を保持するために配列のキーを再設定
         return response()->json($filteredDataWithKeys);
      

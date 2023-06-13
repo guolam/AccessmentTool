@@ -13,7 +13,7 @@ Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])
 ->middleware(['auth', 'verified'])->name('sheet');
     
 Route::get('/dashboard', function () {
-    return view('googleSheet');
+    return view('googleSheetVer2');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
