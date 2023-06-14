@@ -16,13 +16,33 @@
         @endauth
         <!--<label for="email">メールアドレス:</label>-->
 
-        <div class="w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-          <canvas id="radarChart"></canvas>
-        </div>
+        <!--<div class="w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
+        <!--  <canvas id="radarChart"></canvas>-->
+        <!--</div>-->
+        
+        <!--<div class="h-0 sm:h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
+        <!--  <canvas id="radarChart" class="w-full h-full"></canvas>-->
+        <!--</div>-->
 
-        <!--<div class="h-0 sm:h-auto">-->
+
+        <!--<div class="justify-center h-0 sm:h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
         <!--    <canvas id="radarChart" class="w-full h-auto"></canvas>-->
         <!--</div>-->
+        
+      <!--  <div class="flex justify-center items-center">-->
+      <!--  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
+      <!--    <canvas id="radarChart" class="w-full"></canvas>-->
+      <!--  </div>-->
+      <!--</div>-->
+      
+      
+      <div class="flex justify-center items-center">
+        <div class="w-full sm:w-1/2">
+          <canvas id="radarChart" class="w-full"></canvas>
+        </div>
+      </div>
+
+
 
         <script>
             // データ取得用のAjaxリクエストを送信する関数
