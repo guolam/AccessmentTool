@@ -1,4 +1,5 @@
 <x-app-layout>
+
     <head>
         <title>ビジネス力診断</title>
         <!-- Chart.jsのスクリプトを読み込む -->
@@ -12,13 +13,19 @@
                 <x-primary-button id="fetchData" class="mt-4 mb-4 py-2 px-4 bg-blue-500 text-black rounded-lg">診断結果はこちらをクリック
                 </x-primary-button>
 
+
             </div>
         @endauth
         <!--<label for="email">メールアドレス:</label>-->
 
-       <div class="h-0 sm:h-auto">
-        <canvas id="radarChart" class="w-full h-auto"></canvas>
-      </div>
+        <div class="w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+          <canvas id="radarChart"></canvas>
+        </div>
+
+        <!--<div class="h-0 sm:h-auto">-->
+        <!--    <canvas id="radarChart" class="w-full h-auto"></canvas>-->
+        <!--</div>-->
+
         <script>
             // データ取得用のAjaxリクエストを送信する関数
             function fetchData() {
@@ -44,11 +51,7 @@
 
             // レーダーチャートを描画する関数
             function drawRadarChart(data) {
-                // //チャートを重なるために値を振り直す
-                // const timestamp = data[0][0];
-                // const timestamp2=data[1][0];
-
-
+                
                 //それぞれの配列にスライスするに
                 const problemsolvings = [];
                 const resiliences = [];
@@ -633,23 +636,23 @@
                                 }
                             ]
                         },
-                       
+
                         options: {
-                          responsive: true,
-                          maintainAspectRatio: false,
-                          scales: {
-                            r: {
-                              ticks: {
-                                padding: 5,
-                                beginAtZero: true,
-                                max: 10
-                              }
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                r: {
+                                    ticks: {
+                                        beginAtZero: true,
+                                        max: 10
+                                    }
+                                }
                             }
-                          }
                         }
                     });
             }
-            
+
+
 
 
             // データ取得ボタンのクリックイベントを設定
