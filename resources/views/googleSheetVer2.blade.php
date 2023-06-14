@@ -41,12 +41,10 @@
 
         // レーダーチャートを描画する関数
         function drawRadarChart(data) {
-          
-              //チャートを重なるために値を振り直す
-              const timestamp = data[0][0];
-              const timestamp2=data[1][0];
-              
-              
+              // //チャートを重なるために値を振り直す
+              // const timestamp = data[0][0];
+              // const timestamp2=data[1][0];
+
 
             //それぞれの配列にスライスするに
             const problemsolvings = [];
@@ -532,7 +530,7 @@
 
               for (let i = 0; i < 5; i++) {
                 if (data[i] && data[i][0]) {
-                  array[i][0] = data[i][0];
+                  array[i][0] = data[i][182];
                 }
                 if (data[i] && data[i][0]) {
                   array[i][1] = Q1results[i]; 
@@ -573,7 +571,7 @@
                     '時間的展望'
                     ],
                     datasets: [{
-                        label: `${timestamp}`,
+                        label: `${array[0][0]}`,
                         data: [`${array[0][1]}`,`${array[0][2]}`,`${array[0][3]}`,`${array[0][4]}`,`${array[0][5]}`,`${array[0][6]}`,`${array[0][7]}`],
                         fill: true,
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -581,11 +579,35 @@
                         borderWidth: 1
                     },
                     {
-                        label: `${timestamp2}`,
+                        label: `${array[1][0]}`,
                         data: [`${array[1][1]}`,`${array[1][2]}`,`${array[1][3]}`,`${array[1][4]}`,`${array[1][5]}`,`${array[1][6]}`,`${array[1][7]}`],
                         fill: true,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgb(54, 162, 235)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: `${array[2][0]}`,
+                        data: [`${array[2][1]}`,`${array[2][2]}`,`${array[2][3]}`,`${array[2][4]}`,`${array[2][5]}`,`${array[2][6]}`,`${array[2][7]}`],
+                        fill: true,
+                        backgroundColor: 'rgba(235, 127, 54, 0.2)',
+                        borderColor: 'rgb(235, 127, 54)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: `${array[3][0]}`,
+                        data: [`${array[3][1]}`,`${array[3][2]}`,`${array[3][3]}`,`${array[3][4]}`,`${array[3][5]}`,`${array[3][6]}`,`${array[3][7]}`],
+                        fill: true,
+                        backgroundColor: 'rgba(156, 168, 0, 0.2)',
+                        borderColor: 'rgb(156, 168, 0)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: `${array[4][0]}`,
+                        data: [`${array[4][1]}`,`${array[4][2]}`,`${array[4][3]}`,`${array[4][4]}`,`${array[4][5]}`,`${array[4][6]}`,`${array[4][7]}`],
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgb(255, 99, 132)',
                         borderWidth: 1
                     }]
                 },
