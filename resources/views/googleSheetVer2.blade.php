@@ -637,12 +637,15 @@
                         options: {
                           responsive: true,
                           maintainAspectRatio: false,
-                          scale: {
+                          scales: {
+                            r: {
                               ticks: {
-                                  beginAtZero: true,
-                                  max: 10
-                                }
+                                padding: 5,
+                                beginAtZero: true,
+                                max: 10
+                              }
                             }
+                          }
                         }
                     });
             }
