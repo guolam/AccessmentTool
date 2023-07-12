@@ -5,13 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleSheetsController;
 
 
-// Route::get('/', function () {
-//     return view('auth.register');
-// });
-
 Route::get('/', function () {
-    return view('test');
+    return view('auth.register');
 });
+
+// Route::get('/', function () {
+//     return view('test');
+// });
 
 Route::get('/google-sheets-data', [GoogleSheetsController::class, 'getData'])
 ->middleware(['auth', 'verified'])->name('sheet');
