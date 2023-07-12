@@ -6,6 +6,13 @@
         @csrf
 
         <!-- Email Address -->
+        
+        <div class="space-y-4 mb-4">
+          <p>
+            分析結果はログインしてからご覧になれます。
+          </p>
+          
+        </div>
         <div>
             <x-input-label for="email" :value="__('メールアドレス')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />

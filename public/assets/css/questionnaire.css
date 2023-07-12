@@ -1,0 +1,300 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: auto;
+  }
+
+
+
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    /* 適切な幅に設定 */
+    margin: 0 auto;
+    /* 水平方向に中央揃え */
+  }
+
+  .button.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    color: #fff;
+    background-color: #33a474;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 0.8;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+    text-decoration: none;
+    /* letter-spacing: 0.1em; */
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .button:hover {
+    color: #fff;
+    background: #40cd92;
+  }
+
+  .button.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .align-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .align-middle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-container {
+    background-color: #094065;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    margin: 0 20vw;
+    /* 水平方向に中央揃え */
+    max-width: 600px;
+    /* 幅の制限を追加 */
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+  }
+
+  .progress {
+    height: 100%;
+    border-radius: 6px;
+    background-color: #4CAF50;
+    position: relative;
+  }
+
+  .progress-percentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #4CAF50;
+    text-align: left;
+    margin: 0 0.5vw;
+
+  }
+
+  .quiz-main-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    place-content: center;
+    margin: 150px auto 40px;
+    /* 水平方向に中央揃え */
+    max-width: 600px;
+    /* 幅の制限を追加 */
+  }
+
+  .option-main {
+    border-radius: 15px;
+    padding: 25px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .option-parent {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    place-content: center;
+  }
+
+  .question-content,
+  .question-title,
+  .question-main span {
+    font-family: 'montserratbold';
+    font-weight: bolder;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    line-height: 30px;
+    color: #094065;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .option {
+    font-family: 'montserratbold';
+    font-weight: bolder;
+    color: #3f403f;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: visible;
+    margin: 0;
+  }
+
+  .option-disagree {
+    display: flex;
+    justify-content: center;
+  }
+
+  .option-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* 追加のスタイル */
+  .option-box input[type="radio"] {
+    margin: 0;
+    transform: translateY(1px);
+  }
+
+  .option-A {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    border: 4px solid #0070c0;
+    margin: 0 10px;
+  }
+
+  .option-A:hover {
+    background-color: #0070c0;
+  }
+
+  .option-B {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 4px solid #0070c0;
+    margin: 0 10px;
+  }
+
+  .option-B:hover {
+    background-color: #0070c0;
+  }
+
+  .option-C {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 4px solid #9b9faa;
+    margin: 0 10px;
+  }
+
+  .option-C:hover {
+    background-color: #9b9faa;
+  }
+
+  .option-D {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: 4px solid #33a474;
+    margin: 0 10px;
+  }
+
+  .option-D:hover {
+    background-color: #33a474;
+  }
+
+  .option-E {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    border: 4px solid #33a474;
+    margin: 0 10px;
+  }
+
+  .option-E:hover {
+    background-color: #33a474;
+  }
+
+  @media (max-width: 767px) {
+    .progress-container {
+      padding: 15px 20px;
+      /* 左右のパディングを狭める */
+      justify-content: space-between;
+      /* 中央揃えから両端揃えに変更 */
+    }
+
+    .option-main {
+      padding: 20px 25px;
+      /* 左右のパディングを狭める */
+      justify-content: center;
+      /* 中央揃えに変更 */
+    }
+
+    .option {
+      margin: 0 10px;
+      /* 左右のマージンを狭める */
+    }
+  }
+
+  .hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }

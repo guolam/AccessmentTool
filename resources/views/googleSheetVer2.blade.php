@@ -1,5 +1,4 @@
 <x-app-layout>
-
     <head>
         <title>ビジネス力診断</title>
         <!-- Chart.jsのスクリプトを読み込む -->
@@ -14,35 +13,12 @@
                 </x-primary-button>
             </div>
         @endauth
-        <!--<label for="email">メールアドレス:</label>-->
-
-        <!--<div class="w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
-        <!--  <canvas id="radarChart"></canvas>-->
-        <!--</div>-->
-        
-        <!--<div class="h-0 sm:h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
-        <!--  <canvas id="radarChart" class="w-full h-full"></canvas>-->
-        <!--</div>-->
-
-
-        <!--<div class="justify-center h-0 sm:h-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
-        <!--    <canvas id="radarChart" class="w-full h-auto"></canvas>-->
-        <!--</div>-->
-        
-      <!--  <div class="flex justify-center items-center">-->
-      <!--  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">-->
-      <!--    <canvas id="radarChart" class="w-full"></canvas>-->
-      <!--  </div>-->
-      <!--</div>-->
-      
       
       <div class="flex justify-center items-center">
         <div class="w-full sm:w-1/2">
           <canvas id="radarChart" class="w-full"></canvas>
         </div>
       </div>
-
-
 
         <script>
             // データ取得用のAjaxリクエストを送信する関数
@@ -59,7 +35,6 @@
 
                     .then(data => {
                         // データを取得してレーダーチャートを描画する関数を呼び出す
-                        //現時点で複数のデータが取り出されました。
                         drawRadarChart(data);
                     })
                     .catch(error => {
@@ -70,7 +45,7 @@
             // レーダーチャートを描画する関数
             function drawRadarChart(data) {
                 
-                //それぞれの配列にスライスするに
+                //それぞれの空の配列に追加していく
                 const problemsolvings = [];
                 const resiliences = [];
                 const problemfocuses = [];
@@ -117,9 +92,8 @@
                     }
                 }
 
-
                 //逆転項目
-                const reversedIndices = [22, 23, 29, 30, 31, 32, 62, 63, 65, 67, 70, 71, 72, 74, 75, 76, 86, 87, 94, 95, ]
+                const reversedIndices = [22, 23, 29, 30, 31, 32, 62, 63, 65, 67, 70, 71, 72, 74, 75, 76, 86, 87, 94, 95,]
 
                 //問題解決力
                 const resultProblemSolving = {};

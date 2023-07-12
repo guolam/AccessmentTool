@@ -1,15 +1,28 @@
+
+        
 <x-guest-layout>
+    
+    <div class="space-y-4">
+          <p>
+            分析結果は登録してからご覧になれます。
+          </p>
+          <p>
+            必ずGoogle Formでご使用されたメールアドレスでのご登録お願いします。
+          </p>
+          <p>
+            診断結果を再度確認するには、お使いのメールアドレスを必要としますので、メモなどに記録しておいてください。
+          </p>
+    </div>
+    
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
-        <div>
-            <p>
-            分析結果は登録してから見れます。
-            </p>
-        </div>
+       
+
         
-        <div>
+        
+        <div class="mt-4">
             <x-input-label for="name" :value="__('お名前')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
